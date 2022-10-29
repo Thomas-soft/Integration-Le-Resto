@@ -1,0 +1,45 @@
+.main-nav
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    color: $white;
+
+    display: grid;
+    grid-template-columns: 1fr 50% 1fr;
+
+    span
+    {
+        @include center(center);
+        font-weight: 900;
+        color: $white;
+    }
+    
+    ul
+    {
+        @include center(center);
+        li
+        {
+            z-index: 1;
+            a:visited
+            {
+                color: $white;
+            }
+        }
+    }
+
+    .links
+    {
+        @include center(space-between);
+    }
+    .social-links
+    {
+        font-size: 1.2rem;
+        li
+        {
+            margin: 0 12px;
+        }
+    }
+}

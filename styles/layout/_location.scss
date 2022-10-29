@@ -1,0 +1,76 @@
+.maps-section
+{
+    @include center(center);
+    position: relative;
+
+    .contain
+    {
+        position: relative;
+        margin: 200px 0 200px;
+        max-width: 1200px;
+        width: 90%;
+        background-color: $white;
+        width: 90%;
+        text-align: center;
+
+        .img-content
+        {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            top: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+            overflow: hidden;
+
+            img
+            {
+                width: 100%;
+            }
+        }
+
+        p
+        {
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+            line-height: 2rem;
+            font-weight: 300;
+            width: 80%;
+            margin: 100px auto 60px;
+            span
+            {
+                font-size: 2rem;
+            }
+        }
+        h3
+        {
+            text-transform: inherit;
+            font-size: 1.5rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+        a
+        {
+            display: block;
+            color: $brown1;
+            font-size: 1.1rem;
+            font-weight: 300;
+            margin: 10px 0 50px;
+        }
+    }
+    &::after
+    {
+        content: '';
+        position: absolute;
+        background-image: url("../../assets/img/gmap.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        height: 400px;
+    }
+}

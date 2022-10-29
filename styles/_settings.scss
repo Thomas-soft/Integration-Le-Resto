@@ -1,0 +1,81 @@
+@font-face {
+    font-family: "Allura";
+    src: url("../assets/fonts/Allura/Allura-Regular.ttf");
+}
+@font-face {
+    font-family: "Poppins";
+    src: url("../assets/fonts/Poppins/Poppins-Medium.ttf");
+}
+@font-face {
+    font-family: "Roboto";
+    src: url("../assets/fonts/Roboto/Roboto-Light.ttf");
+}
+
+$font-family1: "Allura", system-ui;
+$font-family2: "Poppins", sans-serif, monospace;
+$font-family3: "Roboto", monospace, sans-serif;
+
+$white: rgb(238, 238, 238);
+$black: rgb(33, 32, 30);
+$second-black: #000;
+$grey: rgba(83, 83, 80, 0.452);
+$brown1: rgb(166, 114, 69);
+$brown2: rgba(53, 44, 36, 0.192);
+$border-color: rgb(182, 182, 182);
+
+$pre-size1: 3rem;
+$pre-size2: 2.5rem;
+
+$pre-line-height: 70%;
+
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+.pre-title
+{
+    font-family: $font-family1;
+    font-size: $pre-size2;
+    font-weight: 500;
+    text-transform: initial;
+    color: $brown1;
+}
+
+@mixin center($space)
+{
+    display: flex;
+    justify-content: $space;
+    align-items: center;
+}
+
+h1, h2, h3, h4
+{
+    font-family: $font-family2;
+    text-transform: uppercase;
+}
+ul, a
+{
+    font-family: $font-family3;
+    text-transform: uppercase;
+    list-style: none;
+    text-decoration: none;
+}
+p
+{
+    font-family: $font-family3;
+    font-size: 1rem;
+}
+.ic-plate
+{
+    width: 42px;
+    height: auto;
+    display: block;
+}
+
+body
+{
+    background-color: $black;
+    box-sizing: border-box;
+}

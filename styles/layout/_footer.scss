@@ -1,0 +1,89 @@
+footer
+{
+    background-image: url("../../assets/img/bg-footer.jpg");
+    background-position: center;
+    background-size: cover;
+
+    color: $white;
+    
+    .container
+    {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        .left
+        {
+            justify-self: right;
+        }
+        .right
+        {
+            justify-self: left;
+        }
+        .contain
+        {
+            .pre-title
+            {
+                font-size: 3rem;
+            }
+            p, span
+            {
+                display: block;
+                max-width: 550px;
+                margin: 10px 70px;
+                letter-spacing: 1px;
+                line-height: 170%;
+            }
+            p
+            {
+                color: $white;
+                font-weight: 100;
+            }
+
+            form
+            {
+                margin: 70px;
+                font-size: 1.5rem;
+                display: flex;
+                flex-direction: column;
+
+                input
+                {
+                    margin: 5px;
+                    border: 1px solid $grey;
+                    outline: none;
+                    padding: 5px;
+                    font-size: 1rem;
+                    background-color: transparent;
+                    color: $white
+                }
+            }
+
+            .social
+            {
+                @include center(space-between);
+                margin: 70px;
+                h4
+                {
+                    min-width: max-content;
+                }
+                ul
+                {
+                    @include center(space-around);
+                    width: 100%;
+                    li
+                    {
+                        color: $grey;
+                        a
+                        {
+                            color: $grey;
+                        }
+                        &a:visited
+                        {
+                            color: $grey;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

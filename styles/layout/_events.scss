@@ -1,0 +1,167 @@
+.events-section
+{
+    @include center(center);
+
+    .section-contain
+    {
+        width: 90%;
+        max-width: 1200px;
+
+        h2
+        {
+            text-align: center;
+            font-size: $pre-size1;
+            color: $white;
+            span
+            {
+                font-size: $pre-size1;
+            }
+        }
+        .ic-plate
+        {
+            margin: 40px auto;
+        }
+
+        .events-contain
+        {
+            display: grid;
+            grid-template-areas:
+            "event1 event3"
+            "event2 event3";
+            .containe-top-left{grid-area: event1;}
+            .containe-bottom-left{grid-area: event2;}
+            .container-right{grid-area: event3;}
+            grid-template-columns: 60% 40%;
+            row-gap: 20px;
+            column-gap: 25px;
+
+            h3
+            {
+                text-transform: inherit;
+                font-size: 1.5rem;
+                font-weight: 300;
+                letter-spacing: 2px;
+            }
+
+            i
+            {
+                color: $grey;
+            }
+
+            a
+            {
+                display: block;
+                font-weight: 600;
+                letter-spacing: 2px;
+                &:visited
+                {
+                    color: $black;
+                }
+            }
+            
+            .contain-left, .container-right
+            {
+                background-color: $white;
+                .date
+                {
+                    @include center(center);
+                    position: absolute;
+                    text-align: center;
+                    top: 50%;
+                    left: 50%;
+                    background-color: $black;
+                    width: 100px;
+                    height: 100px;
+                    p
+                    {
+                        color: $white;
+                        font-size: 1.2rem;
+                        span
+                        {
+                            font-size: 2rem;
+                        }
+                    }
+                }
+            }
+            .contain-top-left
+            {
+                .background-container
+                {
+                    background-image: url("../../assets/img/event-01.jpg");
+                }
+            }
+            .contain-bottom-left
+            {
+                .background-container
+                {
+                    background-image: url("../../assets/img/event-02.jpg");
+                }
+            }
+            .contain-left
+            {
+                @include center(space-between);
+
+                .background-container
+                {
+                    position: relative;
+                    background-position: center;
+                    background-size: cover;
+                    min-width: 220px;
+                    min-height: 220px;
+
+                    .date
+                    {
+                        transform: translate(-50%, -50%);
+                    }
+                }
+
+                .infos-contain
+                {
+                    width: 100%;
+                    padding: 0 30px;
+                    p
+                    {
+                        font-weight: 200;
+                        font-size: 1rem;
+                        letter-spacing: 1px;
+                        margin: 40px 0;
+                    }
+                }
+            }
+
+            .container-right
+            {
+                @include center(center);
+                background-image: url("../../assets/img/event-03.jpg");
+
+                .contain
+                {
+                    background-color: $white;
+                    width: 90%;
+                    height: 90%;
+                    text-align: center;
+                }
+                .date
+                {
+                    position: inherit;
+                    margin: 0 auto;
+                }
+                p
+                {
+                    font-weight: 200;
+                    font-size: 1rem;
+                    letter-spacing: 1px;
+                    margin: 40px 0;
+                }
+                h3
+                {
+                    margin: 40px 0;
+                }
+                a
+                {
+                    padding: 40px 0;
+                }
+            }
+        }
+    }
+}

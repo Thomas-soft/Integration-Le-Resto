@@ -1,0 +1,37 @@
+.main-header
+{
+    z-index: -1;
+    background-image: url("../../assets/img/bg-slider-06.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    color: $white;
+
+    @include center(center);
+
+    .contain
+    {
+        transform: translateY(-40px);
+        text-align: center;
+        span
+        {
+            color: $brown1;
+            font-size: $pre-size1;
+        }
+        h1
+        {
+            font-size: 4.5rem;
+            line-height: $pre-line-height;
+        }
+        img
+        {
+            margin: 40px;
+        }
+        h3
+        {
+            font-weight: 300;
+            font-size: 1.3rem;
+            letter-spacing: 3px;
+        }
+    }
+}
