@@ -5,11 +5,26 @@ footer
     background-size: cover;
 
     color: $white;
+
+    @media screen and (max-width: 900px)
+    {
+        background-image: none;
+    }
     
     .container
     {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+
+        @media screen and (max-width: 600px)
+        {
+            grid-template-columns: 1fr;
+
+            .left
+            {
+                display: none;
+            }
+        }
 
         .left
         {
@@ -18,6 +33,10 @@ footer
         .right
         {
             justify-self: left;
+            @media screen and (max-width: 600px)
+            {
+                justify-self: center;
+            }
         }
         .contain
         {
@@ -56,12 +75,26 @@ footer
                     background-color: transparent;
                     color: $white
                 }
+                label
+                {
+                    font-size: 1rem;
+                    font-weight: 700;
+                }
+
+                @media screen and (max-width: 600px)
+                {
+                    margin: 70px auto;
+                }
             }
 
             .social
             {
                 @include center(space-between);
                 margin: 70px;
+                @media screen and (max-width: 600px)
+                {
+                    margin: 70px 0;
+                }
                 h4
                 {
                     min-width: max-content;

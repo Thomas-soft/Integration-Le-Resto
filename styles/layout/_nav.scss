@@ -10,19 +10,25 @@
     display: grid;
     grid-template-columns: 1fr 50% 1fr;
 
+    @media screen and (max-width: 900px)
+    {
+        grid-template-columns: 1fr 1fr;
+    }
+
+
     span
     {
         @include center(center);
         font-weight: 900;
         color: $white;
     }
-    
+
     ul
     {
         @include center(center);
         li
         {
-            z-index: 1;
+            padding: 5px;
             a:visited
             {
                 color: $white;
@@ -33,6 +39,11 @@
     .links
     {
         @include center(space-between);
+
+        @media screen and (max-width: 900px)
+        {
+            display: none;    
+        }
     }
     .social-links
     {

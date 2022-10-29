@@ -6,6 +6,34 @@
     background-position: bottom;
     background-repeat: no-repeat;
 
+    @media screen and (max-width: 600px)
+    {
+        nav ul li
+        {
+            font-size: 0.9rem;
+        }
+
+        .img-content
+        {
+            max-width: 70px;
+            max-height: 70px;
+            overflow: hidden;
+            img
+            {
+                width: 100%;
+            }
+        }
+
+        .menu-contain h4
+        {
+            font-size: 0.7rem;
+        }
+        p
+        {
+            font-size: 0.7rem;
+        }
+    }
+
     .section-contain
     {
         margin: 100px 0 150px;
@@ -85,6 +113,17 @@
             column-gap: 20px;
             border-top: 4px solid $brown1;
 
+            @media screen and (max-width: 600px)
+            {
+                padding: 5px;
+            }
+
+            @media screen and (max-width: 1100px)
+            {
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(8, 1fr);
+            }
+
             .contain
             {
                 @include center(space-between);
@@ -92,33 +131,45 @@
                 border-bottom: 1px dashed $brown2;
                 padding: 30px 0;
 
-                h4
+                @media screen and (max-width: 600px)
                 {
-                    width: max-content;
+                    padding: 10px;
                 }
+
                 .infos-contain
                 {
                     display: flex;
                     align-items: center;
+                    max-width: 300px;
                 }
                 .img-content
                 {
                     width: 120px;
-                    img
-                    {
-                        width: 100%;
-                    }
+                    // img
+                    // {
+                    //     width: 100%;
+                    // }
                 }
                 .text
                 {
                     padding-left: 20px;
                     line-height: 2rem;
+
+                    @media screen and (max-width: 600px)
+                    {
+                        padding: 5px;
+                    }
                 }
                 .price
                 {
                     padding: 0 30px;
                     font-size: 1.2rem;
                     color: $brown1;
+
+                    @media screen and (max-width: 600px)
+                    {
+                        padding: 0;
+                    }
                 }
             }
         }
